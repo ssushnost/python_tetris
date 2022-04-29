@@ -1,4 +1,4 @@
-import tkinter as tk
+"""import tkinter as tk
 
 window = tk.Tk()
 canvas = tk.Canvas(master=window, height=1920, width=600)
@@ -31,4 +31,33 @@ for i in square_map:
         canvas.itemconfig(
             game_grid[j["position"]["x"]][j["position"]["y"]], fill="black"
         )
+
 window.mainloop()
+"""
+
+import pygame as pg
+import sys
+
+pg.init()
+
+def create_grid(rows,columns,blockSize):
+    grid = []
+    for x in range(0,WINDOW_WIDTH,blockSize):
+        for y in range(0,WINDOW_HEIGHT,blockSize):
+            rect = pg.Rect(x,y,blockSize,blockSize)
+            pg.draw.rect(...)
+    
+
+
+
+WINDOW_SIZE = WINDOW_WIDTH, WINDOW_HEIGHT = 320, 240
+
+screen = pg.display.set_mode(WINDOW_SIZE)
+
+while 1:
+    for event in pg.event.get():
+        if event.type == pg.QUIT: sys.exit()
+
+    screen.fill((0,0,0))
+    screen.blit()
+    pg.display.flip()
